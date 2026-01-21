@@ -339,17 +339,16 @@ static inline bool
 check_fanidx(const emc230x* emc, unsigned fanidx){
   unsigned maxfan;
   switch(emc->productid){
-    case EMC2301:
+    case EMCPRODUCTID_2301:
       maxfan = 0;
       break;
-    case EMC2302_MODEL_1:
-    case EMC2302_MODEL_2:
+    case EMCPRODUCTID_2302:
       maxfan = 1;
       break;
-    case EMC2303:
+    case EMCPRODUCTID_2303:
       maxfan = 2;
       break;
-    case EMC2305:
+    case EMCPRODUCTID_2305:
       maxfan = 4;
       break;
     default:
